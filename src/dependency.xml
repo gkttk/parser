@@ -1,0 +1,97 @@
+<dependency isVirtual="false">
+			<fileName>glob-parent:3.1.0</fileName>
+			<filePath>/var/lib/jenkins/workspace/epam-hd.dependency-check.sdm/epam.build.package/package/npm/com.supplyon.src.app.ear/com.supplyon.src.web.common/src/main/react-app/node_modules/glob-parent/package.json</filePath>
+			<md5>ea9912dd8ffef90e678548ecbc59a6fb</md5>
+			<sha1>0937ae9bc613535dccada33a3a494ae3526c4483</sha1>
+			<sha256>4adf39076eab2bbc4020a8d7f15a447eac3c06bcca8878b742b0209c76b5fe30</sha256>
+			<description>Strips glob magic from a string to provide the parent directory path</description>
+			<license>ISC</license>
+			<projectReferences>
+				<projectReference>react-app:0.1.0</projectReference>
+			</projectReferences>
+			<evidenceCollected>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>glob-parent_project</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>homepage</name>
+					<value>https://github.com/es128/glob-parent</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>bugs.url</name>
+					<value>https://github.com/es128/glob-parent/issues</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>glob-parent</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>author.name</name>
+					<value>Elan Shanker</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>description</name>
+					<value>Strips glob magic from a string to provide the parent directory path</value>
+				</evidence>
+				<evidence type="vendor" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>author.url</name>
+					<value>https://github.com/es128</value>
+				</evidence>
+				<evidence type="product" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>name</name>
+					<value>glob-parent</value>
+				</evidence>
+				<evidence type="version" confidence="HIGHEST">
+					<source>package.json</source>
+					<name>version</name>
+					<value>3.1.0</value>
+				</evidence>
+			</evidenceCollected>
+			<identifiers>
+				<package confidence="HIGHEST">
+					<id>pkg:npm/glob-parent@3.1.0</id>
+					<url>https://ossindex.sonatype.org/component/pkg:npm/glob-parent@3.1.0?utm_source=dependency-check&amp;utm_medium=integration&amp;utm_content=6.1.6</url>
+				</package>
+			</identifiers>
+			<vulnerabilities>
+				<vulnerability source="OSSINDEX">
+					<name>CWE-400: Uncontrolled Resource Consumption (&apos;Resource Exhaustion&apos;)</name>
+					<severity>HIGH</severity>
+					<cvssV3>
+						<baseScore>7.5</baseScore>
+						<attackVector>N</attackVector>
+						<attackComplexity>L</attackComplexity>
+						<privilegesRequired>N</privilegesRequired>
+						<userInteraction>N</userInteraction>
+						<scope>U</scope>
+						<confidentialityImpact>N</confidentialityImpact>
+						<integrityImpact>N</integrityImpact>
+						<availabilityImpact>H</availabilityImpact>
+						<baseSeverity>HIGH</baseSeverity>
+					</cvssV3>
+					<cwes>
+						<cwe>CWE-400</cwe>
+					</cwes>
+					<description>The software does not properly restrict the size or amount of resources that are requested or influenced by an actor, which can be used to consume more resources than intended.</description>
+					<references>
+						<reference>
+							<source>OSSINDEX</source>
+							<url>https://ossindex.sonatype.org/vulnerability/64cd5f21-8af4-4eae-ac7d-a53241ea693a?component-type=npm&amp;component-name=glob-parent&amp;utm_source=dependency-check&amp;utm_medium=integration&amp;utm_content=6.1.6</url>
+							<name>CWE-400: Uncontrolled Resource Consumption (&apos;Resource Exhaustion&apos;)</name>
+						</reference>
+					</references>
+					<vulnerableSoftware>
+						<software vulnerabilityIdMatched="true">cpe:2.3:a:*:glob-parent:3.1.0:*:*:*:*:*:*:*</software>
+					</vulnerableSoftware>
+				</vulnerability>
+			</vulnerabilities>
+		</dependency>

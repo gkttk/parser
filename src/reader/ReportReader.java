@@ -21,7 +21,7 @@ public class ReportReader {
         JAXBContext context = JAXBContext.newInstance(Dependencies.class);
 
         return (Dependencies) context.createUnmarshaller()
-                .unmarshal(new FileReader("C:\\custom\\parser\\src\\dependency-check-report_full.xml"));
+                .unmarshal(new FileReader("D:\\parser\\src\\dependency-check-report_full.xml"));
 
 //        JAXBContext context = JAXBContext.newInstance(Dependency.class);
 //        return (Dependency) context.createUnmarshaller()

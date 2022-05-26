@@ -16,6 +16,28 @@ public class ReportCreator {
 
         FileWriter fWriter = new FileWriter("fileName.html");
         BufferedWriter writer = new BufferedWriter(fWriter);
+        writer.write("<head>");
+        writer.write("</link>");
+        writer.write("<link rel=\"stylesheet\" href=\"D:\\parser\\src\\styles.css\">");
+        writer.write("<script src=\"https://code.jquery.com/jquery-3.6.0.js\">");
+        writer.write("</script>");
+        writer.write("<script src=\"https://code.jquery.com/ui/1.13.1/jquery-ui.js\">");
+        writer.write("</script>");
+        writer.write("<script>$( function() {\n"
+                + "    $( \"#accordion\" ).accordion({\n"
+                + "      collapsible: true,"
+                + "      active: false\n"
+                + "    });\n"
+                + "  } );</script>");
+        writer.write("</head>");
+
+        writer.write("<div id=\"accordion\">");
+        writer.write("<h3>SECTION</h3>");
+        writer.write("<div>");
+        writer.write("<p>Text text text text</p>");
+        writer.write("</div>");
+        writer.write("</div>");
+
         writer.write("<table>");
         writer.write("<tr><th>File Name</th><th>Vulnerability</th><th>Severity</th><th>Weakness</th></tr>");
 

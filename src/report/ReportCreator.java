@@ -18,7 +18,7 @@ public class ReportCreator {
         BufferedWriter writer = new BufferedWriter(fWriter);
         writer.write("<head>");
         writer.write("</link>");
-        writer.write("<link rel=\"stylesheet\" href=\"D:\\parser\\src\\styles.css\">");
+        writer.write("<link rel=\"stylesheet\" href=\"src\\styles.css\">");
         writer.write("<script src=\"https://code.jquery.com/jquery-3.6.0.js\">");
         writer.write("</script>");
         writer.write("<script src=\"https://code.jquery.com/ui/1.13.1/jquery-ui.js\">");

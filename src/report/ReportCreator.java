@@ -5,12 +5,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+import formatter.ReportDataFormatter;
 import model.Dependencies;
 import model.Dependency;
 import model.Vulnerability;
 
 public class ReportCreator {
 
+    private final ReportDataFormatter reportDataFormatter;
+
+    public ReportCreator() {
+
+        this.reportDataFormatter = new ReportDataFormatter();
+    }
 
     public void createReport(final Dependencies dependencies) throws IOException {
 
@@ -51,23 +58,23 @@ public class ReportCreator {
                 for (Vulnerability vulnerability : vulnerabilities) {
                     final String fileNameCell = generateFileNameCell(dependency);
                     writer.write(fileNameCell);
-                    String source = vulnerability.getSource();
-                    String name = vulnerability.getName();
-
-                    final String vulnerabilityCell = String.format("<td>%s | %s<td>", source, name);
+                    final String vulnerabilityCell = generateVulnerabilityCell(vulnerability);
                     writer.write(vulnerabilityCell);
+                    final String severityCell = generateSeverityCell(vulnerability);
+                    writer.write(severityCell);
+                    final String weaknessCell = generateWeaknessCell(vulnerability);
+                    writer.write(weaknessCell);
+
                     writer.write("</tr>");
                 }
             }
-
-            //  writer.newLine(); //this is not actually needed for html files - can make your code more readable though
 
             writer.write("</tr>");
         }
 
         writer.write("</table>");
 
-        writer.close(); //make sure you close the writer object
+        writer.close();
 
     }
 
@@ -76,5 +83,32 @@ public class ReportCreator {
 
         return String.format("<td>%s</td>", dependency.getFileName());
     }
+
+
+    private String generateVulnerabilityCell(final Vulnerability vulnerability) {
+
+        final String source = vulnerability.getSource();
+        final String name = vulnerability.getName();
+
+        return String.format("<td>%s | %s</td>", source, name);
+    }
+
+    private String generateSeverityCell(final Vulnerability vulnerability) {
+
+        final String severity = reportDataFormatter.formatSeverityData(vulnerability.getSeverity());
+        return String.format("<td>%s</td>", severity);
+    }
+
+    private String generateWeaknessCell(final Vulnerability vulnerability) {
+
+        final List<String> cwes = vulnerability.getCwes();
+        String weakness = "";
+        if (cwes != null && !cwes.isEmpty()) {
+            weakness = vulnerability.getCwes().get(0);
+        }
+
+        return String.format("<td>%s</td>", weakness);
+    }
+
 
 }

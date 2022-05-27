@@ -77,12 +77,4 @@ public class ReportCreator {
         return String.format("<td>%s</td>", dependency.getFileName());
     }
 
-    private String generateLine(final Dependency dependency) {
-
-        String fileName = dependency.getFileName();
-        String filePath = dependency.getFilePath();
-
-        return String.format("<li>FileName: %s | FilePath: %s</li>", fileName, filePath);
-    }
-
 }
